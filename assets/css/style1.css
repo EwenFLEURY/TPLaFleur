@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/*
+Définition des emplacements dans la grille
+*/
+header {
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.page {
+    grid-area: page;
+}
+
+footer {
+    grid-area: footer;
+}
+/*
+Définition de la grille
+*/
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "menu"
+        "page"
+        "footer";
+}
+
+@media screen and (min-width:480px) {
+.container {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    grid-template-areas:
+        "header   header"
+        "menu  page"
+        "footer   footer";
+}
+}
+/* Centrer la zone page */
+.page {
+    text-align: center;
+}
+/* Aligner à droite le footer*/
+footer {
+    text-align: right;
+    margin-right: 2em;
+}
+
+.menu ul {
+    list-style: none;
+}
+.menu a {
+    text-decoration: none;
+}
+.menu {
+    border-right: 0.1em solid;
+}
+
